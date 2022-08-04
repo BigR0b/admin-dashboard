@@ -10,7 +10,7 @@ body {
 .container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: minmax(200px, 1fr) 6fr;
   grid-template-rows: 1fr 5fr;
   /* gap: 10px; */
   font-family: Arial, Helvetica, sans-serif;
@@ -87,19 +87,27 @@ body {
   grid-template-rows: 0.3fr 0.5fr 1fr;
   color: white;
   font-weight: 900;
-  padding-top: 20px;
   padding-left: 30px;
 }
+
 .branding {
+  display: flex;
+  align-items: center;
   font-size: 20px;
 }
+
 .sidebar ul {
   list-style: none;
 }
 .sidebar ul li {
-  padding-top: 13px;
+  padding-top: 7px;
+  display: flex;
+  align-items: center;
 }
-
+.sidebar ul li img,
+.branding img {
+  padding-right: 20px;
+}
 .main-content {
   /* background-color: var(--lightblue); */
 }
